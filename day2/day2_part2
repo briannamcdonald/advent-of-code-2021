@@ -1,0 +1,22 @@
+def main():
+    data = open("day2/input.txt", "r")
+    lines = [line for line in data]
+
+    position = 0
+    depth = 0
+    aim = 0
+    for line in lines:
+        command, amount = line.split()
+        if command == "forward":
+            position += int(amount)
+            depth += aim * int(amount)
+        elif command == "down":
+            aim += int(amount)
+        elif command == "up":
+            aim -= int(amount)
+
+    print(position * depth)
+
+
+if __name__ == "__main__":
+    main()
