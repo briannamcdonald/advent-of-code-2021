@@ -1,5 +1,5 @@
 def main():
-    data = open("day1/input.txt", "r")
+    data = open("day01/input.txt", "r")
     int_data = [int(num) for num in data]
 
     count = 0
