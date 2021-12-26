@@ -7,8 +7,8 @@ def get_most_and_least_common_vals(vals):
         else:
             count_dict[val] = 1
 
-    key_list = count_dict.keys()
-    val_list = count_dict.values()
+    key_list = list(count_dict.keys())
+    val_list = list(count_dict.values())
     return (
         key_list[val_list.index(max(val_list))],
         key_list[val_list.index(min(val_list))],
